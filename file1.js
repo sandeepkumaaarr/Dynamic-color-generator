@@ -862,10 +862,9 @@
 const body = document.querySelector("body");
 const inpara = document.querySelector(".color-name");
 console.log(inpara);
-const buttons = document.getElementsByClassName("btn");
+const buttons = document.querySelector(".btn");
 console.log(buttons);
-for(let button of buttons){
-    button.addEventListener("click",function(event){
+        buttons.addEventListener("click",function(event){
         // console.log(button);
         let red = Math.floor(Math.random()*256);
         let green = Math.floor(Math.random()*256);
@@ -875,5 +874,4 @@ for(let button of buttons){
         body.style.backgroundColor = color;
         inpara.textContent = color;
     });
-}
 console.log(inpara);
